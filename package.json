@@ -1,5 +1,5 @@
 {
-  "name": "confusion",
+  "name": "constrap4",
   "version": "1.0.0",
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
   }
 }
