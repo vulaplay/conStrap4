@@ -51,15 +51,12 @@
             <div class="modal-body">
                 <form class="form-inline">
                     <div class="form-group">
-                        
-                            <input type="email" class="form-control form-control-sm mr-1" id="emailid" name="emailid"
-                                placeholder="Email">
-                        
+                        <input type="email" class="form-control form-control-sm mr-1" id="emailid" name="emailid"
+                            placeholder="Email">
                     </div>
                     <div class="form-group">
-                        
-                            <input type="password" class="form-control form-control-sm mr-1" id="password" name="password"
-                                placeholder="Password">
+                        <input type="password" class="form-control form-control-sm mr-1" id="password" name="password"
+                            placeholder="Password">
                     </div>
                     <div class="form-check">
                         <label for="form-check-label">
@@ -87,14 +84,75 @@
                     <img src="img/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-warning btn-sm btn-block" href="#reserveform" 
-                        data-toggle="tooltip" data-placement="bottom" title="Or Call us at <br><strong>+852 12345678</strong>" 
-                        data-html="true"><strong>Reserve Table</strong></a>
+                    <a role="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal" 
+                        ><strong>Reserve Table</strong></a>
                 </div> 
             </div>
         </div>
     </header>
-
+    <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog model-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reserve a Table</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form >
+                        <div class="form-group row">
+                            <label for="numberofguests" class="col-sm-3 col-form-label">Number of Guests</label> 
+                            <div class="col-sm-9">
+                                <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="section" class="col-sm-3 col-form-label">Section</label>
+                            <div class="btn-group col-sm-9" data-toggle="buttons">
+                                <label class="btn btn-danger active">
+                                    <input type="radio" name="nonsmk" id="nonsmk" autocomplete="off" checked>
+                                    Non-Smoking
+                                </label>
+                                <label class="btn btn-success">
+                                    <input type="radio" name="smk" id="smk" autocomplete="off">
+                                Smoking
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="dateandtime" class="col-sm-3 col-form-label">Date and Time</label> 
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <label for="reservedate" class="sr-only">Date</label>
+                                    <span class="input-group-addon fa fa-calendar"></span>
+                                    <input type="text" id="reservedate" name="reservedate" class="form-control" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <label for="reservetime" class="sr-only">Time</label> 
+                                    <span class="input-group-addon fa fa-clock-o"></span>
+                                    <input type="" id="reservetime" name="reservetime" class="form-control" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-sm-3 col-sm-8">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <!--needs css formatting, see styles.css-->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -277,11 +335,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-            $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip(); 
-            });
-    </script>
 
 </body>
 
