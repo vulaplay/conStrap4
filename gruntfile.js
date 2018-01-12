@@ -125,6 +125,7 @@ module.exports = function(grunt){
                 encoding: 'utf8',
                 algorithm: 'md5',
                 length: 20
+                
             },
             release: {
                 files: [{
