@@ -19,3 +19,13 @@ $(document).ready(function(){
     });
 
 });
+
+/* function modalControl (id, options){
+            
+    $(`#${id}`).modal(options);
+};
+ */
+
+const modalControl = (id,options) => {
+    $(`#${id}`).modal(options);
+};
